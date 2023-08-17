@@ -8,7 +8,6 @@ export default async function handler(req, res) {
     const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.cyz4zgh.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
     let client;
 
-    // console.log(connectionString);
     try {
       client = await MongoClient.connect(connectionString);
     } catch (error) {
@@ -34,6 +33,4 @@ export default async function handler(req, res) {
       .status(201)
       .json({ message: "Meetup successfully added!", meetup: newMeetup });
   }
-
-  // res.status().json({ message: "" });
 }

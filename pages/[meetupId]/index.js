@@ -25,7 +25,6 @@ export async function getStaticProps(context) {
   const meetupId = context.params.meetupId;
 
   // fetch data
-
   const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.cyz4zgh.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
   let client;
 
@@ -83,12 +82,6 @@ export async function getStaticPaths(context) {
     })),
     fallback: false,
   };
-
-  // here we can fetch data from DB and send existing id - as a paths
-  // return {
-  //   paths: [{ params: { meetupId: "m1" } }, { params: { meetupId: "m2" } }],
-  //   fallback: false,
-  // };
 }
 
 export default MeetupDetails;
