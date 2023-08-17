@@ -28,14 +28,17 @@
 
 .header a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #fcb8d2;
-  padding: 0.125em 0.5em;
+  padding: 0.25em 0.75em;
+  border-radius: 0.75em;
+  transition: 0.1s linear all;
 }
 
 .header a:hover {
   background-color: crimson;
-  border-radius: 0.375em;
+
+  color: white;
 }
 
 .header a:active,
